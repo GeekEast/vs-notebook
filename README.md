@@ -23,3 +23,11 @@ npm run venv:init
 source .venv/bin/activate
 npm run venv:which & npm run lint
 ```
+
+### Environment Variables
+```sh
+# for dev mode
+cp .env.example .env
+# for test mode
+cp .env.example .env.test
+```
