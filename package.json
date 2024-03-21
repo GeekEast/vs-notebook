@@ -1,0 +1,28 @@
+{
+  "name": "jupyter-notebook",
+  "version": "1.0.0",
+  "author": "James Tan",
+  "license": "ISC",
+  "scripts": {
+    "pip:dev": ".venv/bin/pip install -r requirements-dev.txt",
+    "pip:app": ".venv/bin/pip install -r requirements.txt",
+    "venv:create": "virtualenv .venv",
+    "venv:activate": "/bin/bash -c \"source .venv/bin/activate\"",
+    "venv:deactivate": "deactivate",
+    "venv:install": "npm run pip:dev && npm run pip:app",
+    "venv:init": "npm run venv:create && npm run venv:activate && npm run pip:dev && npm run pip:app && npm install",
+    "venv:which": "pip -V",
+    "isort": "isort . -s .venv --profile black",
+    "black": "black . --exclude .venv",
+    "flake8": "flake8 .",
+    "lint": "npm run isort -c && npm run black --check && npm run flake8",
+    "fmt": "npm run isort && npm run black",
+    "test": "env-cmd -f .env.test pytest dags/tests",
+    "tdd": "env-cmd -f .env.test ptw dags/tests",
+    "prepare": "husky install || true"
+  },
+  "devDependencies": {
+    "env-cmd": "^10.1.0",
+    "husky": "^9.0.11"
+  }
+}

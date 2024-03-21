@@ -1,0 +1,19 @@
+{
+  "python.defaultInterpreterPath": ".venv/bin/python",
+  "python.terminal.activateEnvironment": true,
+  "python.envFile": "${workspaceFolder}/.env.local",
+  "editor.formatOnSave": true,
+  "notebook.formatOnSave.enabled": true,
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+  "[python]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    },
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  "black-formatter.path": ["${workspaceFolder}/.venv/bin/black"],
+  "flake8.path": ["${workspaceFolder}/.venv/bin/flake8"],
+  "python.analysis.typeCheckingMode": "off"
+}

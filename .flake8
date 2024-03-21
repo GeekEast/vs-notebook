@@ -1,0 +1,18 @@
+[flake8]
+max-line-length = 70
+exclude = 
+    .venv
+    __pycache__
+    node_modules
+    python_package
+    tmp-dev
+    tmp_dev
+ignore =
+    # line too long, fixed by black
+    E501
+    # line break before binary operator
+    W503
+    # imported but unused
+    F401
+    # whitespace before ':'
+    E203
