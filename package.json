@@ -19,7 +19,7 @@
     "fmt": "npm run isort && npm run black",
     "test": "env-cmd -f .env.test pytest dags/tests",
     "tdd": "env-cmd -f .env.test ptw dags/tests",
-    "prepare": "husky install || true"
+    "prepare": "husky"
   },
   "devDependencies": {
     "env-cmd": "^10.1.0",
